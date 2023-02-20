@@ -10,7 +10,7 @@ Original file is located at
 #!pip install streamlit
 #! pip install pyngrok
 
-!pip install jedi
+#!pip install jedi
 
 import streamlit as st
 
