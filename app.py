@@ -13,7 +13,6 @@ Original file is located at
 import streamlit as st # framework for datascience web based applications
 from PIL import Image
 import requests
-from bs4 import BeautifulSoup # to scrape info from webpages 
 from tensorflow.keras.preprocessing.image import load_img,img_to_array
 
 from keras.models import load_model
