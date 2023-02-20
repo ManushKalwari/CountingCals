@@ -8,12 +8,12 @@ Original file is located at
 """
 
 #!pip install streamlit
-pip install tensorflow
+#pip tensorflow
 
 import streamlit as st # framework for datascience web based applications
 from PIL import Image
 import requests
-from tensorflow.keras.preprocessing.image import load_img,img_to_array
+from keras.preprocessing.image import load_img,img_to_array
 
 from keras.models import load_model
 model = load_model('/content/CountingCals.h5')
