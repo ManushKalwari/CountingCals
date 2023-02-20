@@ -8,7 +8,7 @@ Original file is located at
 """
 
 #!pip install streamlit
-!pip install tensorflow
+pip install tensorflow
 
 import streamlit as st # framework for datascience web based applications
 from PIL import Image
