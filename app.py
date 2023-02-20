@@ -104,7 +104,7 @@ def run():
     if img_file is not None:
         img = Image.open(img_file).resize((250, 250))
         st.image(img, use_column_width=False)
-        save_image_path = '/content/Image_13.png'
+        save_image_path = 'Image_13.png'
         with open(save_image_path, "wb") as f:
             f.write(img_file.getbuffer())
 
