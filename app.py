@@ -16,7 +16,7 @@ import requests
 from tensorflow.keras.utils import load_img,img_to_array
 
 from keras.models import load_model
-model = load_model('/content/CountingCals.h5')
+model = load_model('CountingCals.h5')
 
 labels = {0:'Apple Red', 1:'Apple Red Delicious', 2:'Apple Red Yellow', 3:'Bread White', 4:'Banana Cavendish', 5:'Boiled Eggs', 6:'Apple Braeburn',
           7:'Chapati', 8:'Banana Red', 9:'Apple Golden', 10:'Naan', 11:'Akki Roti', 12:'Rice Masuri', 13:'Ragi Roti', 14:'Apple Granny Smith', 
