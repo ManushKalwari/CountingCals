@@ -79,10 +79,6 @@ font-size: 60px;
 st.markdown(page_style, unsafe_allow_html=True)
 
 
-
-
-
-
 def processed_img(img_path):
     img = load_img(img_path, target_size=(224, 224, 3))
     img = img_to_array(img)
