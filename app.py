@@ -100,7 +100,7 @@ def processed_img(img_path):
 def run():
     st.title("CountingCals🍍")
     st.subheader("Just Upload a photo of your serving. Get to know the calories you consume.")
-    img_file = st.file_uploader("Choose an Image", type=["jpg", "png"])
+    img_file = st.file_uploader("Choose an Image", type=["jpg", "png","jpeg"])
     if img_file is not None:
         img = Image.open(img_file).resize((250, 250))
         st.image(img, use_column_width=False)
