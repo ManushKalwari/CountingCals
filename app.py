@@ -29,10 +29,11 @@ df = pd.read_csv('calories.csv')
 
 page_style = """
 <style>
+
 [data-testid = "stAppViewContainer"] {
 background: #006eb3;
-box-shadow: inset 19px 19px 38px #003f66,
-            inset -19px -19px 38px #009dff;
+#box-shadow: inset 19px 19px 38px #003f66,
+#            inset -19px -19px 38px #009dff;
 }
 
 [data-testid = "stToolbar"] {
