@@ -105,7 +105,6 @@ def run():
         with open(save_image_path, "wb") as f:
             f.write(img_file.getbuffer())
 
-        # if st.button("Predict"):
         if img_file is not None:
             result = processed_img(save_image_path)
             url = 'https://orange-paws-lose-34-125-199-204.loca.lt/'
@@ -120,12 +119,8 @@ def run():
               if((df.iloc[i, 0]).lower() == result.lower()):
                 calorie_value = df.iloc[i, 1]
                 food_weight = df.iloc[i, 2]
-                calorie_std = str(calorie_value) + " / " + str(calorie_std)
+                calorie_std = str(calorie_value) + " / " + str(food_weight)
 
-
-
-
-            #st.text("Image succesfully uploaded {}".format(result))
             st.text("Image uploaded successfully")
             col1,col2 = st.columns(2)
             col1.metric("Food item:",result)
