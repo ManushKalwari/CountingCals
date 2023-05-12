@@ -9,23 +9,16 @@ Original file is located at
 
 #!pip install streamlit
 #! pip install pyngrok
-
 #!pip install jedi
 
 import streamlit as st
 
 #!ls
-
-#!ngrok authtoken 2Kdb7yIBNwhg6ahIm4dyBrZMRsh_42urMsAVouu4Lr9CwGrLk
-
 #from pyngrok import ngrok
-
 #!nohup streamlit run app.py &
 #url = ngrok.connect(port = '8501')
 #print(url)
 
 !streamlit run app.py & npx localtunnel --port 8501
-
 !pgrep streamlit
-
 publ_url
