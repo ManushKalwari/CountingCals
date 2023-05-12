@@ -9,6 +9,7 @@ Original file is located at
 
 #!pip install streamlit
 #pip tensorflow
+#pip install vega==1.3
 
 import streamlit as st # framework for datascience web based applications
 from PIL import Image
