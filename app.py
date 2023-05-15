@@ -98,12 +98,7 @@ def run():
     st.subheader("Upload photos of your food & know the calories you consume.")
     img_files = st.file_uploader("Choose Images", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
 
-    if img_files:
-        for img_file in img_files:
-            img = Image.open(img_file).resize((224, 224))
-            st.image(img, use_column_width=False)
-            save_image_path = f"Image_{img_files.index(img_file)}.png"
-            img.save(save_image_path)
+    
             
     if img_files:
         displayed_images = 0  
