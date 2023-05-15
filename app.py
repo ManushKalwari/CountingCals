@@ -95,14 +95,15 @@ def processed_img(img_path):
 
 def run():
     st.title("CountingCals🍍")
-    st.subheader("Just Upload a photo of your serving. Get to know the calories you consume.")
-    img_file = st.file_uploader("Choose an Image", type=["jpg", "png","jpeg"])
-    if img_file is not None:
-        img = Image.open(img_file).resize((250, 250))
-        st.image(img, use_column_width=False)
-        save_image_path = 'Image_13.png'
-        with open(save_image_path, "wb") as f:
-            f.write(img_file.getbuffer())
+    st.subheader("Upload photos of your food & know the calories you consume.")
+    img_files = st.file_uploader("Choose Images", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
+
+    if img_files:
+        for img_file in img_files:
+            img = Image.open(img_file).resize((250, 250))
+            st.image(img, use_column_width=False)
+            save_image_path = f"Image_{img_files.index(img_file)}.png"
+            img.save(save_image_path)
 
         if img_file is not None:
             result = processed_img(save_image_path)
@@ -120,7 +121,7 @@ def run():
                 food_weight = df.iloc[i, 2]
                 calorie_std = str(calorie_value) + " / " + str(food_weight)
 
-            st.text("Image uploaded successfully")
+            st.text("Images uploaded successfully")
             col1,col2 = st.columns(2)
             col1.metric("Food item:",result)
             col2.metric("Calorie:",calorie_std)
