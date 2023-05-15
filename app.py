@@ -104,6 +104,19 @@ def run():
             st.image(img, use_column_width=False)
             save_image_path = f"Image_{img_files.index(img_file)}.png"
             img.save(save_image_path)
+            
+    if img_files:
+        displayed_images = 0  
+        for img_file in img_files:
+            img = Image.open(img_file).resize((150, 150))
+            st.image(img, use_column_width=False)
+            save_image_path = f"Image_{img_files.index(img_file)}.png"
+            img.save(save_image_path)
+            displayed_images += 1  
+            if displayed_images == 3: 
+                break
+            
+     
 
         if img_file is not None:
             result = processed_img(save_image_path)
