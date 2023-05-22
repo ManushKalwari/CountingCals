@@ -31,15 +31,15 @@ page_style = """
 
 [data-testid = "stAppViewContainer"] {
 background: #f0b000;
-box-shadow: inset 16px 16px 32px #c59000,
-            inset -16px -16px 32px #ffd000;
+box-shadow: inset 11px 11px 17px #c59000,
+            inset -11px -11px 17px #ffd000;
 }
 
 [data-testid = "stToolbar"] {
 border-radius: 12px;
 background: #f0b000;
-box-shadow: inset 16px 16px 32px #c59000,
-            inset -16px -16px 32px #ffd000;
+box-shadow: inset 11px 11px 17px #c59000,
+            inset -11px -11px 17px #ffd000;
 }
 
 [data-testid = "stHeader"] {
@@ -49,8 +49,8 @@ background: #f0b000;
 [data-testid = "stFileUploadDropzone"] {
 border-radius: 18px;
 background: #f0b000;
-box-shadow: inset 16px 16px 32px #c59000,
-            inset -16px -16px 32px #ffd000;
+box-shadow: inset 11px 11px 17px #c59000,
+            inset -11px -11px 17px #ffd000;
 }
 
 [data-testid = "stImage"] img{
@@ -61,8 +61,8 @@ border-radius: 20%;
 border-radius: 18px;
 background: #f0b000;
 padding:16px;
-box-shadow: inset 16px 16px 32px #c59000,
-            inset -16px -16px 32px #ffd000;
+box-shadow: inset 11px 11px 17px #c59000,
+            inset -11px -11px 17px #ffd000;
 }
 
 [id = "countingcals"] {
