@@ -30,7 +30,7 @@ page_style = """
 <style>
 
 [data-testid = "stAppViewContainer"] {
-background: #006eb3;
+background: #f0b000;
 box-shadow: inset 16px 16px 32px #c59000,
             inset -16px -16px 32px #ffd000;
 }
