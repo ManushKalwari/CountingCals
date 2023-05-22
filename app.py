@@ -94,7 +94,7 @@ def processed_img(img_path):
     return res.capitalize()
 
 def run():
-    st.title("CountingCals🍍")
+    #st.title("CountingCals🍍")
     new_title = '<p style="font-family:sans-serif; color:Green; font-size: 42px;">New image</p>'
     st.title(new_title, unsafe_allow_html=True)
     st.subheader("Upload photos of your food & know the calories you consume.")
