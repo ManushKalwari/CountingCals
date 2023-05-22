@@ -31,26 +31,26 @@ page_style = """
 
 [data-testid = "stAppViewContainer"] {
 background: #006eb3;
-#box-shadow: inset 19px 19px 38px #003f66,
-#            inset -19px -19px 38px #009dff;
+box-shadow: inset 16px 16px 32px #c59000,
+            inset -16px -16px 32px #ffd000;
 }
 
 [data-testid = "stToolbar"] {
 border-radius: 12px;
-background: #006eb3;
-box-shadow: inset 11px 11px 21px #003f66,
-            inset -11px -11px 21px #009dff;
+background: #f0b000;
+box-shadow: inset 16px 16px 32px #c59000,
+            inset -16px -16px 32px #ffd000;
 }
 
 [data-testid = "stHeader"] {
-background: #006eb3;
+background: #f0b000;
 }
 
 [data-testid = "stFileUploadDropzone"] {
 border-radius: 18px;
-background: #006eb3;
-box-shadow: inset 11px 11px 21px #003f66,
-            inset -11px -11px 21px #009dff;
+background: #f0b000;
+box-shadow: inset 16px 16px 32px #c59000,
+            inset -16px -16px 32px #ffd000;
 }
 
 [data-testid = "stImage"] img{
@@ -59,15 +59,15 @@ border-radius: 20%;
 
 [data-testid = "column"] {
 border-radius: 18px;
-background: #006eb3;
+background: #f0b000;
 padding:16px;
-box-shadow: inset 11px 11px 21px #003f66,
-            inset -11px -11px 21px #009dff;
+box-shadow: inset 16px 16px 32px #c59000,
+            inset -16px -16px 32px #ffd000;
 }
 
 [id = "countingcals"] {
 text-align: center;
-color: #143628;
+text-color: #143628;
 font-size: 60px;
 }
 
