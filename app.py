@@ -67,7 +67,7 @@ box-shadow: inset 11px 11px 17px #c59000,
 
 [id = "countingcals"] {
 text-align: center;
-text-color: #143628;
+color: #00000;
 font-size: 60px;
 }
 
