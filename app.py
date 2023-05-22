@@ -95,7 +95,7 @@ def processed_img(img_path):
 
 def run():
     #st.title("CountingCals🍍")
-    new_title = '<p style="font-family:sans-serif; color:Green; font-size: 42px;">New image</p>'
+    new_title = '<p style="font-family:sans-serif; color:Green; font-size: 42px;">CountingCals🍍</p>'
     st.title(new_title, unsafe_allow_html=True)
     st.subheader("Upload photos of your food & know the calories you consume.")
     img_files = st.file_uploader("Choose Images", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
