@@ -13,6 +13,7 @@ import streamlit as st # framework for datascience web based applications
 from PIL import Image
 import requests
 from tensorflow.keras.utils import load_img,img_to_array
+import VolumeEstimation
 
 from keras.models import load_model
 model = load_model('CountingCals.h5')
@@ -99,6 +100,8 @@ def run():
     st.title(new_title)
     st.subheader("Upload photos of your food & know the calories you consume.")
     img_files = st.file_uploader("Choose Images", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
+    
+    volume = getVolume(img_files)
 
     
             
