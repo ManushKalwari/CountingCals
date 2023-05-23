@@ -18,7 +18,7 @@ import VolumeEstimation
 from keras.models import load_model
 model = load_model('CountingCals.h5')
 
-labels = {0:'Bread White', 1:'Bread Brown', 2:'Boiled Egg', 3:'Rice' 4:'Banana Elaichi', 5:'Banana Cavendish', 6:'Apple'}
+labels = {0:'Bread White', 1:'Bread Brown', 2:'Boiled Egg', 3:'Rice', 4:'Banana Elaichi', 5:'Banana Cavendish', 6:'Apple'}
 
 import numpy as np
 import pandas as pd
