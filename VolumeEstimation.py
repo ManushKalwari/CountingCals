@@ -5,11 +5,14 @@ import open3d as o3d
 import trimesh
 
 
+
 def extract_features(image):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     sift = cv2.SIFT_create()
     keypoints, descriptors = sift.detectAndCompute(gray, None)
     return keypoints, descriptors
+
+
 
 
 def match_features(descriptors1, descriptors2):
@@ -20,6 +23,8 @@ def match_features(descriptors1, descriptors2):
         if m.distance < 0.9 * n.distance:
             good_matches.append(m)
     return good_matches
+
+
 
 
 
@@ -39,11 +44,9 @@ def get_3D_points(keypoints1, keypoints2, matches, camera_matrix):
     points_3d_homogeneous = cv2.convertPointsFromHomogeneous(points_4d.T)
     points_3d = points_3d_homogeneous[:, 0, :]
     
-    #print("points_4d shape:", points_4d.shape)
-    #print("points_3d shape:", points_3d.shape)
-
-
     return points_3d
+
+
 
 
 
@@ -54,6 +57,8 @@ def integrate_point_clouds(point_clouds):
     for point_cloud in point_clouds:
         merged_point_cloud += point_cloud
     return merged_point_cloud
+
+
 
 
 def ballPivot_reconstruction(point_cloud):
@@ -72,14 +77,15 @@ def ballPivot_reconstruction(point_cloud):
     
     #trimesh.convex.is_convex(tri_mesh)
     #trimesh.exchange.obj.export_obj(tri_mesh) 
-    tri_mesh.show()
+    #tri_mesh.show()
 
     return tri_mesh
 
 
+
+
 def estimate_volume(tri_mesh):
 
-    #print("estimating volume...")
     volume = tri_mesh.volume
     if volume is not None:
         #print(f"Estimated volume: {volume*1000} cubic units")
@@ -90,25 +96,20 @@ def estimate_volume(tri_mesh):
         
     
 
- 
 
-def getVolume(images_folder):
+def getVolume(images_list):
     images = []
     keypoints_list = []
     descriptors_list = []
 
-    for filename in os.listdir(images_folder):
-        if filename.endswith((".jpg", ".JPG", ".png", ".PNG")):
-            img = cv2.imread(os.path.join(images_folder, filename))
-            img = cv2.resize(img, (0, 0), fx = 0.5, fy = 0.5)
-            images.append(img)
+    for image in images_list:
+        img = cv2.resize(img, (0, 0), fx = 0.5, fy = 0.5)
+        images.append(img)
 
-            if len(images) > 1:
-                keypoints, descriptors = extract_features(img)
-                keypoints_list.append(keypoints)
-                descriptors_list.append(descriptors)
-
-            #print(f"Image {len(images)} processed")
+        if len(images) > 1:
+            keypoints, descriptors = extract_features(img)
+            keypoints_list.append(keypoints)
+            descriptors_list.append(descriptors)
 
     if len(images) < 3:
         print("At least three images are required for volume estimation.")
@@ -147,14 +148,7 @@ def getVolume(images_folder):
     integrated_point_cloud = integrate_point_clouds(point_clouds)
     integrated_point_cloud.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=2, max_nn=50))
     mesh = ballPivot_reconstruction(integrated_point_cloud)
-
-  
-    volume = estimate_volume(mesh)
     
+    volume = estimate_volume(mesh)
     return volume
 
-
-
-# Example usage
-#folder_path = 'C:\\Users\\Manush\\Documents\\Python Code\\BackgroundRemovalCode\\bananavolume'
-#getVolume(folder_path)
