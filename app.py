@@ -18,9 +18,7 @@ import VolumeEstimation
 from keras.models import load_model
 model = load_model('CountingCals.h5')
 
-labels = {0:'Apple Red', 1:'Apple Red Delicious', 2:'Apple Red Yellow', 3:'Bread White', 4:'Banana Cavendish', 5:'Boiled Eggs', 6:'Apple Braeburn',
-          7:'Chapati', 8:'Banana Red', 9:'Apple Golden', 10:'Naan', 11:'Akki Roti', 12:'Rice Masuri', 13:'Ragi Roti', 14:'Apple Granny Smith', 
-          15:'Bread Brown', 16: 'Banana Elaichi', 18: 'Rice Basmati', 19:'Rice Mogara', 20:'Thalipeeth'}
+labels = {0:'Bread White', 1:'Bread Brown', 2:'Boiled Egg', 3:'Rice' 4:'Banana Elaichi', 5:'Banana Cavendish', 6:'Apple'}
 
 import numpy as np
 import pandas as pd
