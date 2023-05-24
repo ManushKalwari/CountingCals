@@ -100,24 +100,15 @@ def run():
     
     
     if img_files:
-        displayed_images = 0  
         
-        for image in img_files:
-            
-            image = Image.open(image)
-            resized_img = image.resize((150, 150))
-            st.image(resized_img)
-    
-            #img = Image.open(image)
-            #resized_img = img.resize((150,150))
-            #st.image(resized_img, use_column_width=False)
-            displayed_images += 1
-            #img = image.resize(150, 150)            
-            #st.image(img, use_column_width=False)
+        displayed_images = 0  
+        for img_file in img_files:
+            img = Image.open(img_file).resize((224, 224))
+            st.image(img, use_column_width=False)
             save_image_path = f"Image_{img_files.index(img_file)}.png"
             img.save(save_image_path)
             displayed_images += 1  
-            if displayed_images == 3: 
+            if displayed_images == 3:  
                 break
                  
 
