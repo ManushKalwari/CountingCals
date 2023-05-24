@@ -99,7 +99,7 @@ def run():
     st.subheader("Upload photos of your food & know the calories you consume.")
     img_files = st.file_uploader("Choose Images", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
     
-    volume = getVolume(img_files)
+    volume = VolumeEstimation.getVolume(img_files)
 
     
             
