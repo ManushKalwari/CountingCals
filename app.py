@@ -31,8 +31,8 @@ page_style = """
 
 [data-testid = "stAppViewContainer"] {
 background: #f0b000;
-box-shadow: inset 21px 21px 40px #d19900,
-            inset -21px -21px 40px #ffc700;
+box-shadow: inset 22px 22px 44px #ce9700,
+            inset -22px -22px 44px #ffc900;
 }
 
 [data-testid = "stToolbar"] {
