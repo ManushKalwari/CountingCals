@@ -10,7 +10,7 @@ Original file is located at
 #!pip install streamlit
 #pip tensorflow
 import streamlit as st # framework for datascience web based applications
-#from PIL import Image
+from PIL import Image
 import requests
 import cv2
 from tensorflow.keras.utils import load_img,img_to_array
