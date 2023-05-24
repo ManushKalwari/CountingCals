@@ -31,8 +31,8 @@ page_style = """
 
 [data-testid = "stAppViewContainer"] {
 background: #f0b000;
-box-shadow: inset 22px 22px 44px #ce9700,
-            inset -22px -22px 44px #ffc900;
+box-shadow: inset 20px 20px 40px #c28f00,
+            inset -20px -20px 40px #ffd100;
 }
 
 [data-testid = "stToolbar"] {
@@ -47,7 +47,7 @@ background: #f0b000;
 }
 
 [data-testid = "stFileUploadDropzone"] {
-border-radius: 18px;
+border-radius: 20px;
 background: #f0b000;
 box-shadow: inset 11px 11px 17px #c59000,
             inset -11px -11px 17px #ffd000;
