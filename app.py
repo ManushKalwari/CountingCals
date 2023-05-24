@@ -94,15 +94,10 @@ def processed_img(img_path):
 
 def run():
     st.title("CountingCals🍍")
-    #new_title = '<p style="font-family:sans-serif; color:Green; font-size: 42px;">CountingCals🍍</p>'
-    #st.title(new_title)
     st.subheader("Upload photos of your food & know the calories you consume.")
-    img_files = st.file_uploader("Choose Images. First 2 photos of chessboard pattern", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
+    img_files = st.file_uploader("Start with 2 photos of chess pattern", type=["jpg", "png", "jpeg"], accept_multiple_files=True)    
     
-    volume = VolumeEstimation.getVolume(img_files)
-
     
-            
     if img_files:
         displayed_images = 0  
         for image in img_files:
@@ -113,11 +108,11 @@ def run():
             displayed_images += 1  
             if displayed_images == 3: 
                 break
-            
-     
+                 
 
         if img_file is not None:
             result = processed_img(save_image_path)
+            volume = VolumeEstimation.getVolume(img_files)
             url = 'https://orange-paws-lose-34-125-199-204.loca.lt/'
             form_data = {'file': open(save_image_path, 'rb')}
             resp = requests.post(url, files=form_data)
