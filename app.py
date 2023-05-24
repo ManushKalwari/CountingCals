@@ -104,9 +104,13 @@ def run():
         
         for image in img_files:
             
-            img = Image.open(image)
-            resized_img = img.resize((150,150))
-            st.image(resized_img, use_column_width=False)
+            image = Image.open(image)
+            resized_img = image.resize((600, 400))
+            st.image(resized_img)
+    
+            #img = Image.open(image)
+            #resized_img = img.resize((150,150))
+            #st.image(resized_img, use_column_width=False)
             displayed_images += 1
             img = image.resize(150, 150)            
             st.image(img, use_column_width=False)
