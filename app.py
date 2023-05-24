@@ -133,9 +133,10 @@ def run():
                 calorie_std = str(calorie_value) + " / " + str(food_weight)
 
             st.text("Images uploaded successfully")
-            col1,col2 = st.columns(2)
-            col1.metric("Food item:",result)
-            col2.metric("Calorie:",calorie_std)
+            col1,col2,col3 = st.columns(3)
+            col1.metric("Food:",result)
+            col2.metric("Volume:",volume)
+            col3.metric("Calorie:",calorie_std)
             print(resp)
 
 run()
