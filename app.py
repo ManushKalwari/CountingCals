@@ -93,11 +93,11 @@ def processed_img(img_path):
     return res.capitalize()
 
 def run():
-    #st.title("CountingCals🍍")
-    new_title = '<p style="font-family:sans-serif; color:Green; font-size: 42px;">CountingCals🍍</p>'
-    st.title(new_title)
+    st.title("CountingCals🍍")
+    #new_title = '<p style="font-family:sans-serif; color:Green; font-size: 42px;">CountingCals🍍</p>'
+    #st.title(new_title)
     st.subheader("Upload photos of your food & know the calories you consume.")
-    img_files = st.file_uploader("Choose Images", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
+    img_files = st.file_uploader("Choose Images. First 2 photos of chessboard pattern", type=["jpg", "png", "jpeg"], accept_multiple_files=True)
     
     volume = VolumeEstimation.getVolume(img_files)
 
