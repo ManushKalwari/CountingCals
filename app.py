@@ -100,7 +100,13 @@ def run():
     
     if img_files:
         displayed_images = 0  
+        
         for image in img_files:
+  
+            img = Image.open(image)
+            resized_img = img.resize((150, 150))
+            st.image(resized_img, use_column_width=False)
+            displayed_images += 1
             img = image.resize(150, 150)            
             st.image(img, use_column_width=False)
             save_image_path = f"Image_{img_files.index(img_file)}.png"
