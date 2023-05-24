@@ -121,7 +121,7 @@ def run():
                 break
                  
 
-        if img_file is not None:
+        if img_files is not None:
             result = processed_img(save_image_path)
             volume = VolumeEstimation.getVolume(img_files)
             url = 'https://orange-paws-lose-34-125-199-204.loca.lt/'
