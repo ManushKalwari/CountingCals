@@ -114,8 +114,8 @@ def run():
             displayed_images += 1
             #img = image.resize(150, 150)            
             #st.image(img, use_column_width=False)
-            #save_image_path = f"Image_{img_files.index(img_file)}.png"
-            #img.save(save_image_path)
+            save_image_path = f"Image_{img_files.index(img_file)}.png"
+            img.save(save_image_path)
             displayed_images += 1  
             if displayed_images == 3: 
                 break
