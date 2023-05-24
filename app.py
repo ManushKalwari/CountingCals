@@ -104,7 +104,7 @@ def run():
         
         for image in img_files:
             
-            img = np.array(Image.open(file))
+            img = np.array(Image.open(image))
             resized_img = cv2.resize(img, (150, 150), interpolation=cv2.INTER_AREA)
             st.image(resized_img, use_column_width=False)
             displayed_images += 1
