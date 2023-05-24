@@ -6,3 +6,4 @@ pandas==1.3.5
 requests
 altair==4.0
 opencv-python~=4.7.0
+apt-get update && apt-get install libgl1
