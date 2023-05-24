@@ -104,7 +104,7 @@ def run():
         
         for image in img_files:
             
-            img = np.array(Image.open(image))
+            img = Image.open(image)
             resized_img = img.resize((150,150))
             st.image(resized_img, use_column_width=False)
             displayed_images += 1
