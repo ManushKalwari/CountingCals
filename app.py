@@ -124,7 +124,7 @@ def run():
             calories = 0
 
             for i in range(len(df)):
-              if df.iloc[i, 0].lower().replace(" ", "") == result.lower().replace(" ", ""):
+              if df.iloc[i, 0].strip().lower() == result.strip().lower():
                 
                 calorie_standard = df.iloc[i, 1]
                 food_density = df.iloc[i, 2]
