@@ -67,10 +67,10 @@ def ballPivot_reconstruction(point_cloud):
     point_cloud.estimate_normals()
     distances = point_cloud.compute_nearest_neighbor_distance()
     avg_dist = np.mean(distances)
-    radius = 2 * avg_dist   
+    radius = 0.5 * avg_dist   
 
     mesh = o3d.geometry.TriangleMesh.create_from_point_cloud_ball_pivoting(point_cloud,
-               o3d.utility.DoubleVector([radius, radius * 5]))
+               o3d.utility.DoubleVector([radius, radius * 2]))
     
     # create the triangular mesh with the vertices and faces from open3d
     tri_mesh = trimesh.Trimesh(np.asarray(mesh.vertices), np.asarray(mesh.triangles),
@@ -106,7 +106,7 @@ def getVolume(images_list):
     for image in images_list:
         img = Image.open(image)
         img = np.array(img)
-        img = cv2.resize(img, (0, 0), fx=0.5, fy=0.5)
+        img = cv2.resize(img, (0, 0), fx=0.3, fy=0.3)
         images.append(img)
 
         if len(images) > 1:
