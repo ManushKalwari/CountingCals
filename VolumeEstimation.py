@@ -103,7 +103,9 @@ def getVolume(images_list):
     descriptors_list = []
 
     for image in images_list:
-        img = cv2.resize(image, (0, 0), fx = 0.5, fy = 0.5)
+        #img = cv2.resize(image, (0, 0), fx = 0.5, fy = 0.5)
+        #for img_file in img_files:
+        img = Image.open(image).resize((500, 500))
         images.append(img)
 
         if len(images) > 1:
