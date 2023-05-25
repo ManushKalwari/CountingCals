@@ -127,7 +127,7 @@ def run():
                 
                 print(df.iloc[i, 0])
                 print(result)
-                if df.iloc[i, 0].strip().lower() == result.strip().lower():
+                if (df.iloc[i, 0].lower() == result.lower()):
                 
                     calorie_standard = df.iloc[i, 1]
                     food_density = df.iloc[i, 2]
