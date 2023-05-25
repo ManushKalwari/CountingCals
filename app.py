@@ -121,10 +121,13 @@ def run():
 
             calorie_value = 0
             food_weight = 0
-            calorie_std = 0
+            calories = 0
+            print(df.iloc[i, 0])
+            print(result.lower())
 
             for i in range(len(df)):
               if((df.iloc[i, 0]).lower() == result.lower()):
+                
                 calorie_standard = df.iloc[i, 1]
                 food_density = df.iloc[i, 2]
                 calories = volume*food_density*calorie_standard/100
