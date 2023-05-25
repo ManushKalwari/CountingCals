@@ -8,7 +8,6 @@ from PIL import Image
 
 
 def extract_features(image):
-    #gray = image.convert("L")
     gray = cv2.cvtColor(image, cv2.IMREAD_GRAYSCALE)
     sift = cv2.SIFT_create()
     keypoints, descriptors = sift.detectAndCompute(gray, None)
@@ -105,9 +104,9 @@ def getVolume(images_list):
     descriptors_list = []
 
     for image in images_list:
-        #img = cv2.resize(image, (0, 0), fx = 0.5, fy = 0.5)
-        #for img_file in img_files:
-        img = Image.open(image).resize((500, 500))
+        img = Image.open(image)
+        img = np.array(img)
+        img = cv2.resize(img, (0, 0), fx=0.5, fy=0.5)
         images.append(img)
 
         if len(images) > 1:
