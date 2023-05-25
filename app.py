@@ -19,7 +19,7 @@ import VolumeEstimation
 from keras.models import load_model
 model = load_model('CountingCals.h5')
 
-labels = {2:'Bread White', 3:'Bread Brown', 4:'Boiled Egg', 5:'Rice', 6:'Banana Elaichi', 7:'Banana Cavendish', 8:'Apple'}
+labels = {2:'Bread White', 3:'Bread Brown', 4:'Boiled Egg', 5:'Rice', 6:'Banana elaichi', 7:'Banana cavendish', 8:'Apple'}
 
 import numpy as np
 import pandas as pd
@@ -128,13 +128,13 @@ def run():
                 calorie_standard = df.iloc[i, 1]
                 food_density = df.iloc[i, 2]
                 calories = volume*food_density*calorie_standard/100
-                calories_str = str(calories)
+                #calories_str = str(calories)
 
             st.text("Images uploaded successfully")
             col1,col2,col3 = st.columns(3)
             col1.metric("Food:",result)
             col2.metric("Volume:",volume)
-            col3.metric("Calorie:",calories_str)
+            col3.metric("Calorie:",calories)
             print(resp)
 
 run()
