@@ -8,8 +8,8 @@ from PIL import Image
 
 
 def extract_features(image):
-    gray = image.convert("L")
-    #gray = cv2.cvtColor(img, cv2.IMREAD_GRAYSCALE)
+    #gray = image.convert("L")
+    gray = cv2.cvtColor(image, cv2.IMREAD_GRAYSCALE)
     sift = cv2.SIFT_create()
     keypoints, descriptors = sift.detectAndCompute(gray, None)
     return keypoints, descriptors
