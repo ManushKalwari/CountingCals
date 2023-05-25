@@ -131,12 +131,12 @@ def run():
                 
                     calorie_standard = df.iloc[i, 1]
                     food_density = df.iloc[i, 2]
-                    calories = volume*food_density*calorie_standard/100
+                    calories = str(volume*food_density*calorie_standard/100)
 
             st.text("Images uploaded successfully")
             col1,col2,col3 = st.columns(3)
             col1.metric("Food:",result)
-            col2.metric("Volume:",(volume*25/(-5.5)))
+            col2.metric("Volume:",(volume*25/(5.5)))
             col3.metric("Calorie:",calories)
             print(resp)
 
