@@ -125,15 +125,16 @@ def run():
 
             for i in range(len(df)):
               if((df.iloc[i, 0]).lower() == result.lower()):
-                calorie_value = df.iloc[i, 1]
-                food_weight = df.iloc[i, 2]
-                calorie_std = str(calorie_value) + " / " + str(food_weight)
+                calorie_standard = df.iloc[i, 1]
+                food_density = df.iloc[i, 2]
+                calories = (volume*food_density)*calorie_standard/100
+                calorie_str = str(calories)
 
             st.text("Images uploaded successfully")
             col1,col2,col3 = st.columns(3)
             col1.metric("Food:",result)
             col2.metric("Volume:",volume)
-            col3.metric("Calorie:",calorie_std)
+            col3.metric("Calorie:",calorie_str)
             print(resp)
 
 run()
