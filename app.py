@@ -122,7 +122,7 @@ def run():
             calorie_value = 0
             food_weight = 0
             calories = 0
-            print(df.iloc[7, 0])
+            print(df.iloc[5, 0])
             print(result.lower())
 
             for i in range(len(df)):
