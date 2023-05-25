@@ -124,10 +124,10 @@ def run():
             calories = 0
 
             for i in range(len(df)):
-              if(((df.iloc[i, 1]).lower()) == (result.lower())):
+              if(((df.iloc[i, 0]).str.lower()) == (result.lower())):
                 
-                calorie_standard = df.iloc[i, 2]
-                food_density = df.iloc[i, 3]
+                calorie_standard = df.iloc[i, 1]
+                food_density = df.iloc[i, 2]
                 calories = volume*food_density*calorie_standard/100
 
             st.text("Images uploaded successfully")
