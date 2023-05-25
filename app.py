@@ -133,7 +133,7 @@ def run():
             st.text("Images uploaded successfully")
             col1,col2,col3 = st.columns(3)
             col1.metric("Food:",result)
-            col2.metric("Volume:",(volume*25))
+            col2.metric("Volume:",(volume*25/(-5.5)))
             col3.metric("Calorie:",calories)
             print(resp)
 
