@@ -94,7 +94,7 @@ def processed_img(img_path):
     return res.capitalize()
 
 def run():
-    st.title("CountingCals🍍")
+    st.title("🍌CountingCals🍍")
     st.subheader("Upload photos of your food & know the calories you consume.")
     img_files = st.file_uploader("Start with 2 photos of chess pattern", type=["jpg", "png", "jpeg"], accept_multiple_files=True)    
     
