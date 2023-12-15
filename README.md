@@ -14,7 +14,7 @@ CountingCals is a web app that estimates calories from food images.
 ![camera_calib2 (1)](https://github.com/ManushKalwari/CountingCals/assets/125916187/82fb4d7c-ef19-48c7-861a-35b591266c09)
 
 ## Web app
-![UI-min](https://github.com/ManushKalwari/CountingCals/assets/125916187/085ade89-4478-4d67-9e6d-5408fbed96ce)
+![ss_app](https://github.com/ManushKalwari/CountingCals/assets/125916187/4926ff7c-9afc-4c53-8237-407a3cdfa49a)
 
 
 
