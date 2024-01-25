@@ -1,6 +1,5 @@
 # CountingCals
-
-CountingCals is a web app that estimates calories from food images. 
+Estimate calories intake from food image
 
 > **_Data_**- Custom data, Food-101, Fruits-360 (total 10 categories) <br />
 > **_Food Classifier_**- Fine tuned MobileNetV2 (93.46% test accuracy) <br />
